@@ -6,7 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Cache-Control" content="no-transform">
 <meta http-equiv="Cache-Control" content="no-siteapp">
+
 <?php get_template_part( 'inc/functions/seo' ); ?>
+
 <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
 <link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -16,19 +18,24 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/scrollmonitor.js"></script>
+
 <?php if (is_home() ) { ?>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/slides.js"></script>
 <?php } ?>
+
 <?php if (is_single() || is_page() ) { ?>
 <link rel="stylesheet" id="home-css" href="<?php bloginfo('template_directory'); ?>/images/highlight.css" type="text/css" media="all">
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/comments-ajax.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/fancybox.js"></script>
 <?php } ?>
+
 <!--[if IE]>
 <div class="tixing"><strong>温馨提示：感谢您访问本站，经检测您使用的浏览器为IE浏览器，为了获得更好的浏览体验，请使用Chrome、Firefox或其他浏览器。</strong>
 </div>
 <![endif]-->
+
 <?php wp_head(); ?>
+
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
@@ -73,4 +80,5 @@
 	else { include(TEMPLATEPATH . '/inc/search-baidu.php'); } ?>	
 	<div class="clear"></div>
 </div>
+
 <?php the_crumbs(); ?>
