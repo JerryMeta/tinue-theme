@@ -64,9 +64,7 @@ function deletehtml($description) {
 	$description = strip_tags($description,"");
 	return ($description);
 }
-
 add_filter('category_description', 'deletehtml');
-
 //标题文字截断
 function cut_str($src_str,$cut_length)
 {
@@ -116,10 +114,8 @@ function cut_str($src_str,$cut_length)
 
 //后台预览
 add_editor_style('/css/editor-style.css');
-
 //禁用工具条
 show_admin_bar(false);
-
 //禁止代码标点转换
 remove_filter('the_content', 'wptexturize');
 
@@ -134,9 +130,8 @@ remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );// 短链接
 
 // 下载按钮
 function button_a($atts, $content = null) {
-	return '<div id="down"><a id="load" title="下载链接" href="#button_file">下载地址</a><div class="clear"></div></div>';
+return '<div id="down"><a id="load" title="下载链接" href="#button_file">下载地址</a><div class="clear"></div></div>';
 }
-
 add_shortcode("file", "button_a");
 
 // 编辑器增强
